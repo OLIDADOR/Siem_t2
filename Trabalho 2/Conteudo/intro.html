@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<!-- Inserir icon -->
+	<title>Games Vault - SIEM Trabalho 2</title>
+
+
+</head>
+<body>
+ <button onclick="play_video()" class="button" id="button_intro">Enter the Vault!</button>
+
+
+ <div class="video-container hide" id="video_container">
+            <video muted id="myVideo">
+                <source src="./videos/Intro_Video.mp4" type="video/mp4">
+            </video>
+</div>
+
+</body>
+
+<script type='text/javascript'>
+    
+    
+	document.getElementById('myVideo').addEventListener('ended',myHandler,false);
+    // Espera que o evento acabe para abrir outra pagina
+    function myHandler(e) {   	
+        window.open('index.php', '_self');
+    }
+    function play_video() {
+    	document.getElementById('button_intro').style.display ="none";
+    	document.getElementById('video_container').className += " show";
+    	document.getElementById('myVideo').play(); 	
+    }
+    function openNav() {
+	  document.getElementById("mySidenav").style.width = "250px";
+	  document.getElementById("main").style.marginLeft = "250px";
+	}
+
+	/* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
+	function closeNav() {
+	  document.getElementById("mySidenav").style.width = "0";
+	  document.getElementById("main").style.marginLeft = "0";
+	}
+
+</script>
+
+</html>
