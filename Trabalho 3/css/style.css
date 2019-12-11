@@ -92,7 +92,7 @@ h1{
   grid-column-end: 2;
   grid-row-start: 2;
   grid-row-end: 6;
-  width:15.625em;
+  width:0em;
   z-index: 1;
   background-color: #111; 
   overflow-x: hidden; 
@@ -193,10 +193,10 @@ h1{
 }
 
 .sidebar_open {
-  position: fixed;
+  float:right;
   bottom: 3%;
   right: 3%;
-  font-size: 18px;
+  z-index:40000000;
 }
 
 /****************************************************************************************************************
