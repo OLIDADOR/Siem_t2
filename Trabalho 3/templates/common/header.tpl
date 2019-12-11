@@ -34,7 +34,7 @@
   <a href="{$BASE_URL}/pages/downloads.php"><div class="f"><img src="{$BASE_URL}/images/sideBar_icons/Download_Icon.png" height="20" width="20" hspace="5">Downloads </div></a>
   <a href="{$BASE_URL}/pages/product/product_management.php"><div class="c" id="a1"><img src="{$BASE_URL}/images/sideBar_icons/Imagem4.png" height="20" width="20" hspace="5">Product Management </div></a>
   <a href="{$BASE_URL}/pages/product/Sales_management.php"> <div class="c" id="a3"><img src="{$BASE_URL}/images/sideBar_icons/Imagem8.png" height="20" width="20" hspace="5"> Sales Management </div></a>
-  <a href="{$BASE_URL}/pages/user/user_management.php"> <div class="c" id="a2"><img src="{$BASE_URL}/images/sideBar_icons/Imagem5.png" height="20" width="20" hspace="5"> User Management </div></a>
+  <a href="{$BASE_URL}/pages/users/user_management.php"> <div class="c" id="a2"><img src="{$BASE_URL}/images/sideBar_icons/Imagem5.png" height="20" width="20" hspace="5"> User Management </div></a>
   <div class="d"> The best games are in the Vault</div>
   <a href="contacts.php"><div class="f"><img src="{$BASE_URL}/images/sideBar_icons/Imagem6.png" height="20" width="20" hspace="5"> Contacts</div></a>
   <a href="{$BASE_URL}/actions/users/logout.php"><div class="f"><img src="{$BASE_URL}/images/sideBar_icons/Imagem7.png" height="20" width="20" hspace="5">Logout</div></a>
