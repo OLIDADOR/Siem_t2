@@ -193,10 +193,12 @@ h1{
 }
 
 .sidebar_open {
+  grid-column-start: 2;
+  grid-column-end: 5;
+  grid-row-start: 5;
+  grid-row-end: 5;
   float:right;
-  bottom: 3%;
-  right: 3%;
-  z-index:40000000;
+  z-index:5;
 }
 
 /****************************************************************************************************************
