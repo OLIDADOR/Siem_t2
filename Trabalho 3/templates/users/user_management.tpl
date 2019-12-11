@@ -1,5 +1,4 @@
 {include file='common/header.tpl'}
-<div class="sidebar_open"> <span onclick="toggleNav()"><img src="{$BASE_URL}/images/sideBar_icons/open_close_bar.png" height="40" width="40" align="left"></span></div>
 <br>
 <form action="{$BASE_URL}/actions/users/manage_users.php" method="post">
 
@@ -21,6 +20,5 @@
 </form>
 
 <br>
-</div>
 
 {include file='common/footer.tpl'}

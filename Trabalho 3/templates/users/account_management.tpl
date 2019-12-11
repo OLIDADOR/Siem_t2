@@ -1,10 +1,9 @@
 {include file='common/header.tpl'}
-<div class="sidebar_open"> <span onclick="toggleNav()"><img src="{$BASE_URL}/images/sideBar_icons/open_close_bar.png" height="40" width="40" align="left"></span></div>
 <br>
 <h1>Edit Account</h1>
 <br>
 <form action="{$BASE_URL}/actions/edit_account_action.php" method="post">
- <div class="t1"><b>ID:  <span class=t2>{$user.id}</span> </div>
+ <div class="t1"><b>ID:  <span class=t2>{$user.id}</span> </b></div>
 <br>
  <div class="t1"><b>Username:  <span class=t2>{$user.username}</span>          </b><input type="text" placeholder="Enter Username" name="login"  style="width:300; height:30; margin-left:50px" > </div>
  <label class="label" id="ea_u"  style="text-align: center; display:none; color:#fff;">Username already in  use!</label>
@@ -20,4 +19,5 @@
 <br>
 <input type="submit" value="Comfirm Changes" class="comfirm2"> 
 </form>
-</div>
+
+{include file='common/footer.tpl'}
