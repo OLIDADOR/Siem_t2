@@ -9,10 +9,11 @@
 }
 
   
-  
+  /*
   ini_set('display_errors', 1);
   ini_set('display_startup_errors', 1);
   error_reporting(E_ALL);
+  */
 
   //lidação a base de dados
   $conn = new PDO('pgsql:host=db.fe.up.pt;dbname=siem1911', 'siem1911', 'siem2019'); //mudar !!!

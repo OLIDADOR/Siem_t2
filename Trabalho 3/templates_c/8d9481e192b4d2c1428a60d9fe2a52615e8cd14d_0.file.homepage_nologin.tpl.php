@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2019-12-03 15:21:59
+/* Smarty version 3.1.30, created on 2019-12-11 10:08:31
   from "/usr/users2/2015/up201503216/public_html/tf/templates/homepages/homepage_nologin.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5de66f87b1ddf2_21987362',
+  'unifunc' => 'content_5df0b20fa16156_62762263',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8d9481e192b4d2c1428a60d9fe2a52615e8cd14d' => 
     array (
       0 => '/usr/users2/2015/up201503216/public_html/tf/templates/homepages/homepage_nologin.tpl',
-      1 => 1575382867,
+      1 => 1576029606,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5de66f87b1ddf2_21987362 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5df0b20fa16156_62762263 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <html>
 <head>
@@ -35,7 +35,8 @@ function content_5de66f87b1ddf2_21987362 (Smarty_Internal_Template $_smarty_tpl)
 /js/login_form.js"><?php echo '</script'; ?>
 >
 	<title>Games Vault - SIEM Trabalho 2</title>
-
+	
+<div class="grid">
 	<div class="topnav">
 		<img class="logo" src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
 /images/logo.png">
@@ -108,6 +109,10 @@ function content_5de66f87b1ddf2_21987362 (Smarty_Internal_Template $_smarty_tpl)
 <br>
 <h1>Deals of the Vault</h1>
 <br>
+</div>
+	<div id="footer">
+	  Site criado por: Marco Silva e Diogo Matos - <b>Credenciais:</b> 'user:pass' client:client admin:admin - Testado no Mozilla Firefox com a resolução 1366x768
+	</div> 
 </div>
 </body><?php }
 }
