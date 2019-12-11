@@ -18,7 +18,7 @@
 <div class="t1"><b>Is Admin:    <span class=t2>{$user.admin}</span>            </b><input type="checkbox" value="1" name="admin"  style="width:20px; height:20px;  margin-left:2em;"> </div>
 <br>
 
-<input type="submit" value="Edit User" class="comfirm2" > 
+<input type="submit" name="back" value="Back" class="comfirm2" > <input type="submit" name="edit_user"  value="Edit User" class="comfirm2" > 
 </form>
 
 

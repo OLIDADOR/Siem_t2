@@ -3,6 +3,7 @@
 include_once('../../config/init.php');
 include_once($BASE_DIR .'database/users.php');  
 
+if (isset($_POST['add_user'])){
 $user_p = $_POST['login'];
 $email_p = $_POST['email'];
 $password_p=$_POST['password'];
@@ -10,7 +11,8 @@ $saldo_p = $_POST['saldo'];
 $admin = $_POST['admin'];
 
 $tr = createUser($user_p, $email_p, $password_p, $saldo_p);
-
+echo $tr;
+/*
 	if($tr==-1){
 		echo $tr;
 		header("Location:  $BASE_URL" . '/pages/users/add_user.php');
@@ -31,5 +33,10 @@ $tr = createUser($user_p, $email_p, $password_p, $saldo_p);
 		
 	header("Location:  $BASE_URL" . '/pages/users/user_management.php');
 	}
+*/
+}
 
+elseif (isset($_POST['back'])){
+	header("Location:  $BASE_URL" . '/pages/users/user_management.php');
+}
 ?>

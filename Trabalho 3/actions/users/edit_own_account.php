@@ -3,6 +3,7 @@
 include_once('../../config/init.php');
 include_once($BASE_DIR .'database/users.php');  
 
+
 $id=$_SESSION['id'];
 $user_p = $_POST['login'];
 $email_p = $_POST['email'];
@@ -13,13 +14,26 @@ $user = $row[1];
 $email = $row[3];
 $saldo = $row[4];
 
-if($user_p){
+if(!empty($user_p) or is_numeric($user_p)){
 	$user=$user_p;
 }
-if($email_p){
+if(!empty($email_p)){
 	$email=$email_p;
 }
 
 $tr = edituser($id,$user,$email,$saldo);
 
+	if($tr==-1){
+			echo $tr;
+			header("Location:  $BASE_URL" . '/pages/users/account_management.php');
+		}
+		elseif ($tr==-2){
+			echo $tr;
+			header("Location:  $BASE_URL" . '/pages/users/account_management.php');
+		}	
+		elseif ($tr==-3){
+			echo $tr;
+			header("Location:  $BASE_URL" . '/pages/users/account_management.php');
+		}	
+header("Location:  $BASE_URL" . '/pages/users/account_management.php');
 ?>

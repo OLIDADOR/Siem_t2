@@ -8,9 +8,14 @@ $id = $_POST['check'];
 
 
 if (isset($_POST['edit'])) {
+	if(!empty($id) or is_numeric($id)){
 	$_SESSION['m_id'] = $id;
 	header("Location: $BASE_URL" . '/pages/users/edit_user.php');
     }
+	else{
+		header("Location: $BASE_URL" .'/pages/users/user_management.php');
+	}
+}
  elseif (isset($_POST['delete'])) {
 	$temp = deleteuser($id);
 	if(!$result) {

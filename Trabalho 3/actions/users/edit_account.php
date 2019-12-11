@@ -3,6 +3,8 @@
 include_once('../../config/init.php');
 include_once($BASE_DIR .'database/users.php');  
 
+
+if (isset($_POST['edit_user'])){
 $id = $_SESSION['m_id'];
 $user = getuser($_SESSION['m_id']);
 //echo  $user['email'];
@@ -19,21 +21,20 @@ $admin_p = $_POST['admin'];
 
 
 
-if(!empty($user_p)){
-	$user=$user_p;
+if(!empty($user_p) or is_numeric($user_p)){
+	$username=$user_p;
 }
 if(!empty($email_p)){
 	$email=$email_p;
 }
-if(!empty($saldo_p)){
+if(!empty($saldo_p) or is_numeric($saldo_p)){
 	$saldo=$saldo_p;
 }
-
-echo  $user;
+echo  $username;
 echo  $email;
 echo  $saldo;
 
-$tr = edituser($id,$user,$email,$saldo);
+$tr = edituser($id,$username,$email,$saldo);
 
 
 
@@ -51,14 +52,20 @@ $tr = edituser($id,$user,$email,$saldo);
 			header("Location:  $BASE_URL" . '/pages/users/edit_user.php');
 		}	
 else{
-	if($admin==1){
+	if($admin_p==1){
 		makeadmin($id);
 		header("Location:  $BASE_URL" . '/pages/users/user_management.php');
 	}
-	else if($admin!=1){
+	else if($admin_p!=1){
 		removeadmin($id);
 		header("Location:  $BASE_URL" . '/pages/users/user_management.php');
 	}
+}
+
+}
+
+elseif (isset($_POST['back'])){
+	header("Location:  $BASE_URL" . '/pages/users/user_management.php');
 }
 
 
