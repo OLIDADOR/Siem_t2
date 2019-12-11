@@ -186,18 +186,20 @@ h1{
   grid-column-start: 2;
   grid-column-end: 3;
   grid-row-start: 2;
-  grid-row-end: 4;
+  grid-row-end: 5;
   padding: 1.25em;
   margin-right:6.25em;
   z-index:4;
 }
 
+
 .sidebar_open {
-  float:right;
-  bottom: 3%;
-  right: 3%;
+ position:fixed;
+ bottom:10%;
+ right:4%;
   z-index:40000000;
 }
+
 
 /****************************************************************************************************************
 **************************************************Side Bar End***************************************************
