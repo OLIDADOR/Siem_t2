@@ -23,7 +23,7 @@
 
 	<div class="topnav">
 		<img class="logo" src="{$BASE_URL}/images/logo.png">
-        <button onclick="toogleLogin()" >Login/Register</button>
+		<logbox>Login:  <?php echo $_SESSION['user'];?><br> Balance:  <?php echo $_SESSION['saldo'];?> </logbox>
 	</div>
 	
 <div id="mySidenav" class="sidenav">

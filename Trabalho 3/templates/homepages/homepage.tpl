@@ -1,5 +1,3 @@
-{include file='common/header.tpl'}
-<br>
+{include file='common/header_login.tpl'}
 <h1>Deals of the Vault</h1>
-<br>
-{include file='common/footer.tpl'}
+{include file='common/footer_login.tpl'}
