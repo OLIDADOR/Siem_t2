@@ -23,8 +23,14 @@
 
 	<div class="topnav">
 		<img class="logo" src="{$BASE_URL}/images/logo.png">
-        <button  >Login</button>
-        <button  >Register</button>
+        <section id="container">
+            <form action="{$BASE_URL}actions/users/login.php" method="post">
+                <input type="text" placeholder="username" name="Username">
+                <input type="password" placeholder="password" name="Password">
+                <input type="submit" name="login" value="Login">
+                <input type="submit" name="register" value = "Register" id ="register_button">
+            </form>
+        </section>
 	</div>
 	
 <div id="main"><br>

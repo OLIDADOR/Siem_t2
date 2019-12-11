@@ -17,7 +17,7 @@ html {
   height: 100%;
   display: grid;
   grid-template-columns: 15.625em auto auto auto;
-  grid-template-rows: 4.6875em auto auto 3em 2.8125em; // atualizado para o footer
+  grid-template-rows: 4.6875em auto auto 3em 2.8125em;
   
 }
 
@@ -59,40 +59,41 @@ h1{
   margin-top: 0.0625em;
 }
 
-/* Add a color to the active/current link */
-.topnav button {
+.topnav #login{
   float: right;
-  border-radius: 0.25em;
+}
+
+.topnav #container {
+  float:right;
+  display: flex;
+  flex-direction: row ;
+  text-align: center;
+  margin-top: 1.5625em;
+  margin-right: 0.9375em;
+ 
+}
+
+.topnav input[type="text"]{
+  width: 10em;
+  height: 1.875em;
+}
+
+.topnav input[type="password"]{
+  width: 10em;
+  height: 1.875em;
+}
+.topnav input[type="submit"]{
   background-color: #f04b2e;
-  border-color: #050505;
-  color: #ffffff;
-  text-align: center; 
-  font-size: 1.25em;
-  padding:0.375em 0.625em;
-  bottom: 0.3125em;
-  margin-top: 0.9375em;
-  margin-right: 0.625em;
-  transition: all 0.5s;
-  cursor: pointer;
-  z-index: 1;	
-}
-
-.topnav button:hover{
-  opacity: 0.8; 
-}
-
-.topnav logbox {
-  float: right;
+  color: white;
+  border-color: #f04b2e;
+  box-sizing: content-box;
   border-radius: 0.25em;
-  background-color: #646464;
-  color: #ffffff;
-  text-align: left; 
-  font-size: 16px;
-  padding: 0.3125em 3.125em 0.625em 1.25em;
-  bottom: 0.3125em;
-  margin-top: 0.9375em;
-  margin-right: 0.625em;
-  z-index: 1;	
+  height: 1.875em;
+}
+
+#register_button {
+  background-color: #5b96dfd3;
+  border-color: #5b96dfd3;
 }
 /****************************************************************************************************************
 **************************************************Top Nav End****************************************************
@@ -216,158 +217,45 @@ h1{
   z-index:5;
 }
 
-
 /****************************************************************************************************************
 **************************************************Side Bar End***************************************************
 *****************************************************************************************************************/
 
 /****************************************************************************************************************
-**************************************************Login Form Begin***********************************************
+**************************************************Register Form Begin********************************************
 *****************************************************************************************************************/
-
-*,:after,:before{box-sizing:border-box}
-.clearfix:after,.clearfix:before{content:'';display:table}
-.clearfix:after{clear:both;display:block}
-a{color:inherit;text-decoration:none}
-
-.login-wrap{
-  display: none;
-	width:100%;
-  margin-top:10%;
-  margin-left: 35%;
-	max-width:400px;
-	min-height:500px;
-	position:relative;
-	background:url(../images/background_login.jpg) no-repeat center;
-}
-.login-html{
-	width:100%;
-	height:100%;
-	position:absolute;
-	padding:20px 70px 50px 70px;
-	background:rgba(204, 44, 39, 0.9);
-}
-.login-html .sign-in-htm,
-.login-html .sign-up-htm{
-	top:0;
-	left:0;
-	right:0;
-	bottom:0;
-	position:absolute;
-	transform:rotateY(180deg);
-	backface-visibility:hidden;
-	transition:all .4s linear;
-}
-.login-html .sign-in,
-.login-html .sign-up,
-.login-form .group .check{
-	display:none;
-}
-.login-html .tab{
-	font-size:22px;
-	margin-right:15px;
-	padding-bottom:5px;
-	margin:0 15px 10px 0;
-	display:inline-block;
-	border-bottom:2px solid transparent;
-}
-.login-html .sign-in:checked + .tab,
-.login-html .sign-up:checked + .tab{
-	color:#fff;
-	border-color:#131414;
-}
-.login-form{
-	min-height:345px;
-	position:relative;
-	perspective:1000px;
-	transform-style:preserve-3d;
-}
-.login-form .group{
-	margin-bottom:15px;
-}
-.login-form .group .label,
-.login-form .group .input,
-.login-form .group .button{
-	width:100%;
-	color:#fff;
-	display:block;
-}
-.login-form .group .input,
-.login-form .group .button{
-	border:none;
-	padding:15px 20px;
-	border-radius:25px;
-	background:rgba(255,255,255,.1);
-}
-.login-form .group input[data-type="password"]{
-
-	-webkit-text-security:circle;
-}
-.login-form .group .label{
-	color:rgb(255, 255, 255);
-	font-size:12px;
-}
-.login-form .group .button{
-	background:#121213;
-}
-.login-form .group label .icon{
-	width:15px;
-	height:15px;
-	border-radius:2px;
-	position:relative;
-	display:inline-block;
-	background:rgba(240, 239, 239, 0.973);
-}
-.login-form .group label .icon:before,
-.login-form .group label .icon:after{
-	content:'';
-	width:10px;
-	height:2px;
-	background:#fff;
-	position:absolute;
-	transition:all .2s ease-in-out 0s;
-}
-.login-form .group label .icon:before{
-	left:3px;
-	width:5px;
-	bottom:6px;
-	transform:scale(0) rotate(0);
-}
-.login-form .group label .icon:after{
-	top:6px;
-	right:0;
-	transform:scale(0) rotate(0);
-}
-.login-form .group .check:checked + label{
-	color:#fff;
-}
-.login-form .group .check:checked + label .icon{
-	background:#161616;
-}
-.login-form .group .check:checked + label .icon:before{
-	transform:scale(1) rotate(45deg);
-}
-.login-form .group .check:checked + label .icon:after{
-	transform:scale(1) rotate(-45deg);
-}
-.login-html .sign-in:checked + .tab + .sign-up + .tab + .login-form .sign-in-htm{
-	transform:rotate(0);
-}
-.login-html .sign-up:checked + .tab + .login-form .sign-up-htm{
-	transform:rotate(0);
+#register {
+  width: 20em;
+  margin: 1em auto;
 }
 
-.hr{
-	height:2px;
-	margin: 5px 0 10px 0;
-	background:rgba(245, 245, 245, 0.979);
+#register form {
+  align-self: center;
+  justify-self: center;
 }
-.foot-lnk{
-	text-align:center;
+
+#register input {
+  display: block;
+  border: 0;
+  margin: 1em;
+  padding: 1em;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#register input[type=submit] {
+  background-color: #5b96dfd3;
+  color: white;
+  border-radius: 2em;
+}
+
+#register h2{
+  text-align: center;
+  color: white;
 }
 
 /****************************************************************************************************************
-**************************************************Login Form End*************************************************
+**************************************************Register Form End**********************************************
 *****************************************************************************************************************/
 
 /****************************************************************************************************************
@@ -378,11 +266,11 @@ a{color:inherit;text-decoration:none}
   grid-column-end: 5;
   grid-row-start: 5;
   grid-row-end: 6;
-  padding: 1rem;
+  padding: 1em;
   text-align: center;
   width:90%;
   color: white;
-  font-size: 1.10em;
+  font-size: 16px;
   background-color: black;
   z-index: 5;
 }
