@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2019-12-03 15:15:43
+/* Smarty version 3.1.30, created on 2019-12-11 10:17:05
   from "/usr/users2/2015/up201503216/public_html/tf/templates/common/header.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5de66e0f050af1_65797667',
+  'unifunc' => 'content_5df0b411b065d0_12829157',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '6333d7dacdda54439ab3ec2b6b1fdf9a40d2ed78' => 
     array (
       0 => '/usr/users2/2015/up201503216/public_html/tf/templates/common/header.tpl',
-      1 => 1575382298,
+      1 => 1576055670,
       2 => 'file',
     ),
   ),
@@ -20,22 +20,74 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5de66e0f050af1_65797667 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5df0b411b065d0_12829157 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 
 <html>
 
-
-
-
 <head>
 	<link rel="stylesheet" type="text/css" href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
 /css/style.css">
 	<title>Games Vault - SIEM Trabalho 2</title>
+	<?php echo '<script'; ?>
+ type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+/js/add_edit_delete.js"><?php echo '</script'; ?>
+>
+	<?php echo '<script'; ?>
+ type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+/js/add_user.js"><?php echo '</script'; ?>
+>
+	<?php echo '<script'; ?>
+ type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+/js/admin.js"><?php echo '</script'; ?>
+>
+	<?php echo '<script'; ?>
+ type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+/js/edit_account.js"><?php echo '</script'; ?>
+>
+	<?php echo '<script'; ?>
+ type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+/js/edit_user.js"><?php echo '</script'; ?>
+>
+	<?php echo '<script'; ?>
+ type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+/js/login_form.js"><?php echo '</script'; ?>
+>
+	<?php echo '<script'; ?>
+ type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+/js/product.js"><?php echo '</script'; ?>
+>
+	<?php echo '<script'; ?>
+ type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+/js/product_m.js"><?php echo '</script'; ?>
+>
+	<?php echo '<script'; ?>
+ type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+/js/purchase.js"><?php echo '</script'; ?>
+>
+	<?php echo '<script'; ?>
+ type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+/js/search.js"><?php echo '</script'; ?>
+>
+	<?php echo '<script'; ?>
+ type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+/js/sidebar.js"><?php echo '</script'; ?>
+>
+	<?php echo '<script'; ?>
+ type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+/js/store.js"><?php echo '</script'; ?>
+>
 </head>
 <body>
 <div class="grid">
+
+	<div class="topnav">
+		<img class="logo" src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+/images/logo.png">
+        <button onclick="toogleLogin()" >Login/Register</button>
+	</div>
+	
 <div id="mySidenav" class="sidenav">
   <div class="e"></div>
   <a href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
