@@ -16,8 +16,8 @@ html {
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-columns: 15.625em auto;
-  grid-template-rows: 4.6875em auto auto auto 2.8125em; // atualizado para o footer
+  grid-template-columns: 15.625em auto auto auto;
+  grid-template-rows: 4.6875em auto auto 3em 2.8125em; // atualizado para o footer
   
 }
 
@@ -38,9 +38,9 @@ h1{
   background-color: #333;
   overflow: hidden;
   grid-column-start: 1;
-  grid-column-end: 3;
+  grid-column-end: 5;
   grid-row-start: 1;
-  grid-row-end: 1;
+  grid-row-end: 2;
   padding-left: 1.875em;
   z-index: 2;
 }
@@ -184,7 +184,7 @@ h1{
 #main {
  
   grid-column-start: 2;
-  grid-column-end: 3;
+  grid-column-end: 5;
   grid-row-start: 2;
   grid-row-end: 5;
   padding: 1.25em;
@@ -194,11 +194,11 @@ h1{
 
 
 .sidebar_open {
-  grid-column-start: 2;
+  grid-column-start: 4;
   grid-column-end: 5;
-  grid-row-start: 5;
+  grid-row-start: 4;
   grid-row-end: 5;
-  float:right;
+  margin-right:4em;
   z-index:5;
 }
 
@@ -361,9 +361,9 @@ a{color:inherit;text-decoration:none}
 *****************************************************************************************************************/
 #footer {	 
   grid-column-start: 2;
-  grid-column-end: 2;
+  grid-column-end: 5;
   grid-row-start: 5;
-  grid-row-end: 5;
+  grid-row-end: 6;
   padding: 1rem;
   text-align: center;
   width:90%;
