@@ -40,15 +40,19 @@ $tr = edituser($id,$username,$email,$saldo);
 
 
 		if($tr==-1){
-			echo $tr;
+			$_SESSION['em_u']=1;
+			$_SESSION['em_e']=0;
 			header("Location:  $BASE_URL" . '/pages/users/edit_user.php');
 		}
 		elseif ($tr==-2){
 			echo $tr;
+			$_SESSION['em_u']=0;
+			$_SESSION['em_e']=1;
 			header("Location:  $BASE_URL" . '/pages/users/edit_user.php');
 		}	
 		elseif ($tr==-3){
-			echo $tr;
+			$_SESSION['em_u']=1;
+			$_SESSION['em_e']=1;
 			header("Location:  $BASE_URL" . '/pages/users/edit_user.php');
 		}	
 else{

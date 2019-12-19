@@ -24,15 +24,18 @@ if(!empty($email_p)){
 $tr = edituser($id,$user,$email,$saldo);
 
 	if($tr==-1){
-			echo $tr;
+			$_SESSION['ea_u']=1;
+			$_SESSION['ea_e']=0;
 			header("Location:  $BASE_URL" . '/pages/users/account_management.php');
 		}
 		elseif ($tr==-2){
-			echo $tr;
+			$_SESSION['ea_u']=1;
+			$_SESSION['ea_e']=0;
 			header("Location:  $BASE_URL" . '/pages/users/account_management.php');
 		}	
 		elseif ($tr==-3){
-			echo $tr;
+			$_SESSION['ea_u']=1;
+			$_SESSION['ea_e']=0;
 			header("Location:  $BASE_URL" . '/pages/users/account_management.php');
 		}	
 header("Location:  $BASE_URL" . '/pages/users/account_management.php');
