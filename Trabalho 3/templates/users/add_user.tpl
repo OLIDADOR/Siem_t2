@@ -1,4 +1,4 @@
-{include file='common/header.tpl'}
+{include file='common/header_login.tpl'}
 
 <br>
 <h1>Add User</h1>

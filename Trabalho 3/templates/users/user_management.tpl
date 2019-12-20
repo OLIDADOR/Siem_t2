@@ -1,4 +1,4 @@
-{include file='common/header.tpl'}
+{include file='common/header_login.tpl'}
 <br>
 <form action="{$BASE_URL}/actions/users/manage_users.php" method="post">
 

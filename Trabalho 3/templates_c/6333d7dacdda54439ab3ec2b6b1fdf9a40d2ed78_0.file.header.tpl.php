@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2019-12-11 10:17:05
+/* Smarty version 3.1.30, created on 2019-12-20 15:20:57
   from "/usr/users2/2015/up201503216/public_html/tf/templates/common/header.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5df0b411b065d0_12829157',
+  'unifunc' => 'content_5dfce6d9bc3685_52900908',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '6333d7dacdda54439ab3ec2b6b1fdf9a40d2ed78' => 
     array (
       0 => '/usr/users2/2015/up201503216/public_html/tf/templates/common/header.tpl',
-      1 => 1576055670,
+      1 => 1576773088,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5df0b411b065d0_12829157 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5dfce6d9bc3685_52900908 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 
@@ -36,19 +36,7 @@ function content_5df0b411b065d0_12829157 (Smarty_Internal_Template $_smarty_tpl)
 >
 	<?php echo '<script'; ?>
  type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
-/js/add_user.js"><?php echo '</script'; ?>
->
-	<?php echo '<script'; ?>
- type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
 /js/admin.js"><?php echo '</script'; ?>
->
-	<?php echo '<script'; ?>
- type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
-/js/edit_account.js"><?php echo '</script'; ?>
->
-	<?php echo '<script'; ?>
- type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
-/js/edit_user.js"><?php echo '</script'; ?>
 >
 	<?php echo '<script'; ?>
  type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
@@ -109,7 +97,7 @@ function content_5df0b411b065d0_12829157 (Smarty_Internal_Template $_smarty_tpl)
 /pages/product/Sales_management.php"> <div class="c" id="a3"><img src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
 /images/sideBar_icons/Imagem8.png" height="20" width="20" hspace="5"> Sales Management </div></a>
   <a href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
-/pages/user/user_management.php"> <div class="c" id="a2"><img src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+/pages/users/user_management.php"> <div class="c" id="a2"><img src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
 /images/sideBar_icons/Imagem5.png" height="20" width="20" hspace="5"> User Management </div></a>
   <div class="d"> The best games are in the Vault</div>
   <a href="contacts.php"><div class="f"><img src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
