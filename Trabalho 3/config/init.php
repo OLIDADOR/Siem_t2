@@ -3,11 +3,12 @@
   $BASE_URL = 'https://gnomo.fe.up.pt/~up201503216/tf/';
   
   session_start();
+/*
   if (isset($_SESSION['error_messages'])) {
 	$smarty->assign('ERROR_MESSAGES', $_SESSION['error_messages']);
 	unset($_SESSION['error_messages']);
 }
-
+*/
   
   /*
   ini_set('display_errors', 1);
