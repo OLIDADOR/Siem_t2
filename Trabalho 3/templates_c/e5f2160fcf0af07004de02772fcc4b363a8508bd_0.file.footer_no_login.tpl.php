@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.30, created on 2019-12-20 15:20:18
+/* Smarty version 3.1.30, created on 2020-01-10 11:12:43
   from "/usr/users2/2015/up201503216/public_html/tf/templates/common/footer_no_login.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5dfce6b203f375_83097049',
+  'unifunc' => 'content_5e185c2bc225e0_18536659',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5dfce6b203f375_83097049 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e185c2bc225e0_18536659 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 	</div> 
 	<div id="footer">

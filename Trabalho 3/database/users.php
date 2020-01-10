@@ -20,17 +20,17 @@
 		return -3;
 	}
 	else{
-		$stmt = $conn->prepare("INSERT INTO credentials (username, pass, email, saldo) VALUES(?,?,?,?);");
-		$stmt->execute(array($username, md5($password),$email,$balance));
+		$stmt = $conn->prepare("INSERT INTO credentials (username, pass, email, saldo, email_com) VALUES(?,?,?,?,?);");
+		$stmt->execute(array($username, md5($password),$email,$balance,0));
 		$temp=$stmt->fetch(PDO::FETCH_ASSOC);
 		return $temp[0];
 	}	
   }
   function login($username, $password) {
     global $conn;
-    $stmt = $conn->prepare("select * from credentials where username = ? AND pass = ?;");
-    $stmt->execute(array($username,md5($password)));
-	$stmt->fetchAll();
+    $stmt = $conn->prepare("select * from credentials where username = ? and pass =? And email_com = ?;");
+    $stmt->execute(array($username, md5($password),1));
+	$r=$stmt->fetchAll();
 	$num_registos_l = $stmt->rowCount();
 	if($num_registos_l > 0){
 		return 1;	
@@ -42,8 +42,8 @@
   
   function loginid($username, $password) {
     global $conn;
-    $stmt = $conn->prepare("select id from credentials where username = ? AND pass = ?;");
-    $stmt->execute(array($username,md5($password)));
+    $stmt = $conn->prepare("select id from credentials where username = ? AND pass = ? And email_com = ?;");
+    $stmt->execute(array($username,md5($password),1));
 	return $stmt->fetch();
   }
   
@@ -106,6 +106,12 @@
     global $conn;
     $stmt = $conn->prepare("UPDATE credentials SET admin = '0' WHERE id=?");
     $stmt->execute(array($id));
+	return $stmt->fetchAll();
+  }
+  function emailVerificationValidation($email) {
+    global $conn;
+    $stmt = $conn->prepare("UPDATE credentials SET email_com= '1' WHERE email=?");
+    $stmt->execute(array($email));
 	return $stmt->fetchAll();
   }
 

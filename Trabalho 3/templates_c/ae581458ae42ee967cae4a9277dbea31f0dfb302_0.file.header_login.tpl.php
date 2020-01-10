@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2019-12-20 16:21:40
+/* Smarty version 3.1.30, created on 2020-01-10 11:40:39
   from "/usr/users2/2015/up201503216/public_html/tf/templates/common/header_login.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5dfcf514f2e1a9_91628017',
+  'unifunc' => 'content_5e1862b777c407_46416598',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ae581458ae42ee967cae4a9277dbea31f0dfb302' => 
     array (
       0 => '/usr/users2/2015/up201503216/public_html/tf/templates/common/header_login.tpl',
-      1 => 1576857908,
+      1 => 1578652792,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5dfcf514f2e1a9_91628017 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e1862b777c407_46416598 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 
@@ -30,6 +30,32 @@ function content_5dfcf514f2e1a9_91628017 (Smarty_Internal_Template $_smarty_tpl)
 	<link rel="stylesheet" type="text/css" href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
 /css/style.css">
 	<title>Games Vault - SIEM Trabalho 2</title>
+	
+	
+	
+    <?php echo '<script'; ?>
+ type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.slim.min.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" ><?php echo '</script'; ?>
+>
+	<?php echo '<script'; ?>
+ src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"><?php echo '</script'; ?>
+>
+	
+	
 	<?php echo '<script'; ?>
  type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
 /js/add_edit_delete.js"><?php echo '</script'; ?>
@@ -73,6 +99,12 @@ function content_5dfcf514f2e1a9_91628017 (Smarty_Internal_Template $_smarty_tpl)
 	<?php echo '<script'; ?>
  type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
 /js/store.js"><?php echo '</script'; ?>
+>
+	
+    <!-- Messages Close Button -->
+    <?php echo '<script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+/js/msg_close.js" type="text/javascript"><?php echo '</script'; ?>
 >
 </head>
 <body>

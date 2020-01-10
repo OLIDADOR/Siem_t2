@@ -2,19 +2,9 @@
   $BASE_DIR = dirname(__DIR__).'/';
   $BASE_URL = 'https://gnomo.fe.up.pt/~up201503216/tf/';
   
-  session_start();
-/*
-  if (isset($_SESSION['error_messages'])) {
-	$smarty->assign('ERROR_MESSAGES', $_SESSION['error_messages']);
-	unset($_SESSION['error_messages']);
-}
-*/
-  
-  /*
-  ini_set('display_errors', 1);
-  ini_set('display_startup_errors', 1);
-  error_reporting(E_ALL);
-  */
+ session_start();
+
+
 
   //lidação a base de dados
   $conn = new PDO('pgsql:host=db.fe.up.pt;dbname=siem1911', 'siem1911', 'siem2019'); //mudar !!!
@@ -24,10 +14,34 @@
   $stmt->execute();
   $stmt->fetchAll();
   
-  //smarty
-  include_once($BASE_DIR . 'lib/smarty/Smarty.class.php');
+ include_once($BASE_DIR . 'lib/smarty/Smarty.class.php');
+  
+  
   $smarty = new Smarty;
   $smarty->template_dir = $BASE_DIR . 'templates/';
   $smarty->compile_dir = $BASE_DIR . 'templates_c/';
   $smarty->assign('BASE_URL', $BASE_URL);
+ 
+ 
+ 
+ if (!isset($_SESSION['login_e'])) {
+  	$_SESSION['login_e']=0;
+}
+  
+if (isset($_SESSION['form_values'])) {
+  $smarty->assign('form_values', $_SESSION['form_values']);
+  unset($_SESSION['form_values']);
+}
+
+if (isset($_SESSION['error_messages'])) {
+  $smarty->assign('error_messages', $_SESSION['error_messages']);
+  unset($_SESSION['error_messages']);
+}
+
+if (isset($_SESSION['success_messages'])) {
+  $smarty->assign('success_messages', $_SESSION['success_messages']);
+  unset($_SESSION['success_messages']);
+}
+  
+  
 ?>

@@ -12,8 +12,6 @@ if ($_SESSION['login_l']!=1){
  
 
  $smarty->assign('users', $users);
- $smarty->assign('userinuse', $_SESSION['am_u']);
- $smarty->assign('emailinuse', $_SESSION['am_e']);
  $smarty->assign('admin', $_SESSION['admin_l']);
  $smarty->display('users/add_user.tpl');
  $_SESSION['am_u']=0;
