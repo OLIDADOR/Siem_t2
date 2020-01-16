@@ -6,5 +6,7 @@
 }
   
   $smarty->assign('admin', $_SESSION['admin_l']);
+  $smarty->assign('user', $_SESSION['user']);
+  $smarty->assign('saldo', $_SESSION['saldo']);
   $smarty->display('homepages/homepage.tpl');
 ?>

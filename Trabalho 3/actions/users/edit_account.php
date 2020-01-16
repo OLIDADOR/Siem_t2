@@ -42,7 +42,7 @@ if(!empty($saldo_p) or is_numeric($saldo_p)){
 $email = test_input($email);
  // check if e-mail address is well-formed
  if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-      $_SESSION['error_messages'][] = "Invalid entity email format";
+      $_SESSION['error_messages'][] = "Invalid email format";
       $_SESSION['form_values']=$_POST;
       //die(header('Location: ' . $_SERVER['HTTP_REFERER']));
     }

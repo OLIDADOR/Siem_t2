@@ -9,7 +9,8 @@ if ($_SESSION['login_l']!=1){
 
 
  $users = getalluser();
- 
+ $smarty->assign('user', $_SESSION['user']);
+ $smarty->assign('saldo', $_SESSION['saldo']);
 
  $smarty->assign('users', $users);
  $smarty->assign('admin', $_SESSION['admin_l']);

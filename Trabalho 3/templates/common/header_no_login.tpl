@@ -30,7 +30,7 @@
 <div class="grid">
 
 	<div class="topnav">
-		<img class="logo" src="{$BASE_URL}/images/logo.png">
+		<a href="{$BASE_URL}/pages/homepages/index_no_login.php"><img class="logo" src="{$BASE_URL}/images/logo.png"></a>
         <section class="container">
 		{if $login_e eq "1"}
 		<label class="label_l" >Wrong Username or Password! </label>
@@ -47,4 +47,4 @@
         </section>
 	</div>
 	
-<div id="main"><br>
+<div id="main" style="grid-column-start: 1;"><br>

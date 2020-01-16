@@ -19,7 +19,7 @@ html {
   width: 100%;
   height: 100%;
   display: grid;
-  justify-items: center;
+ /*justify-items: center;*/
   grid-template-columns: 15.625em auto auto auto;
   grid-template-rows: 4.6875em auto auto 3em 2.8125em;
   
@@ -103,7 +103,7 @@ h1{
   color: white;
   border-radius:  0.25em;
   background-color: #646464;
-  padding: 0 1em 0 1em;
+  padding: 0.5em 1em 0.5em 1em;
   text-align: left;
   margin-top: 1em;
 }
@@ -242,8 +242,6 @@ h1{
 *****************************************************************************************************************/
 #register {
   width: 20em;
-  margin: 1em auto;
-  margin-left: 250px;
 }
 
 #register form {
@@ -375,21 +373,17 @@ h1{
 
 
 .t3{
-	Font-size:25;
+	Font-size:35px;
 	color: #ffffff;
-	padding-left:100px;
 	padding-bottom:15px;
+	margin-left:2em;
 	text-align: center;
-	margin-left: 100px
 }
 
 .t4{
-	Font-size:25;
+	Font-size:25px;
 	color: #ffffff;
-	padding-left:100px;
-	padding-bottom:15px;
 	text-align: center;
-	margin-left: 190px
 }
 
 .d_img {
@@ -401,7 +395,6 @@ h1{
 .c_img {
   height: 300;
   width: 250;
-  margin-left: 290px;
 }
 .label_u{
 	font-size:18px;
@@ -430,13 +423,13 @@ h1{
   font-size: 20px;
   padding-bottom: 0.5em;
   padding-top: 0.5em;
+  padding-right: 1em;
   margin-top: 1em;
   margin-bottom: 1em;
   border-radius: 2em;
   text-align: center;
-  background: #4b6cb7;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #182848, #4b6cb7);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #182848, #4b6cb7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  width:100%;
+   background:#eaebef;  /* fallback for old browsers */
 }
 
 
@@ -444,11 +437,13 @@ h1{
   color: red;
   font-size: 20px;
   padding-bottom: 0.5em;
+  padding-right: 1em;
   padding-top: 0.5em;
   margin-top: 1em;
   margin-bottom: 1em;
   border-radius: 2em;
   text-align: center;
+   width:100%;
   background:#eaebef;  /* fallback for old browsers */
 }
 
@@ -587,3 +582,6 @@ h1{
 /****************************************************************************************************************
 ********************************************Product End*******************************************************
 *****************************************************************************************************************/
+
+
+
