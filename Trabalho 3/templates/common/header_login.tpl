@@ -37,7 +37,9 @@
 
 	<div class="topnav">
 		<img class="logo" src="{$BASE_URL}/images/logo.png">
-		<logbox>Login:  <?php echo $_SESSION['user'];?><br> Balance:  <?php echo $_SESSION['saldo'];?> </logbox>
+		<section class="container" id="login_correct">
+			Username: <?php echo $_SESSION['user'];?><br> Balance:  <?php echo $_SESSION['saldo'];?>
+		</section>
 	</div>
 	
 <div id="mySidenav" class="sidenav">

@@ -1,4 +1,7 @@
-body { 
+/****************************************************************************************************************
+**************************************************Geral Begin****************************************************
+*****************************************************************************************************************/
+body {
   background: url(../images/Intro_Background.jpg);
   font-family: "Trebuchet MS", Helvetica, sans-serif;
   z-index: 1;
@@ -16,6 +19,7 @@ html {
   width: 100%;
   height: 100%;
   display: grid;
+  justify-items: center;
   grid-template-columns: 15.625em auto auto auto;
   grid-template-rows: 4.6875em auto auto 3em 2.8125em;
   
@@ -28,7 +32,9 @@ h1{
 	padding-top:0.3em;
 	padding-bottom:0.3em;
 } 
-
+/****************************************************************************************************************
+**************************************************Geral End******************************************************
+*****************************************************************************************************************/
 
 /****************************************************************************************************************
 **************************************************Top Nav Begin**************************************************
@@ -41,12 +47,13 @@ h1{
   grid-column-end: 5;
   grid-row-start: 1;
   grid-row-end: 2;
+  width: 100%;
   padding-left: 1.875em;
   z-index: 2;
 }
 
 /* Style the links inside the navigation bar */
-.topnav a {
+.topnav > a {
   float: left;
   color: #f2f2f2;
   text-align: center;
@@ -63,14 +70,15 @@ h1{
   float: right;
 }
 
-.topnav #container {
+.topnav .container {
   float:right;
   display: flex;
   flex-direction: row ;
+  vertical-align: top;
   text-align: center;
   margin-top: 1.5625em;
-  margin-right: 0.9375em;
- 
+  margin-right: 1.5em;
+  
 }
 
 .topnav input[type="text"]{
@@ -89,6 +97,15 @@ h1{
   box-sizing: content-box;
   border-radius: 0.25em;
   height: 1.875em;
+}
+
+#login_correct{
+  color: white;
+  border-radius:  0.25em;
+  background-color: #646464;
+  padding: 0 1em 0 1em;
+  text-align: left;
+  margin-top: 1em;
 }
 
 #register_button {
@@ -197,7 +214,6 @@ h1{
 
 
 #main {
- 
   grid-column-start: 2;
   grid-column-end: 5;
   grid-row-start: 2;
@@ -376,21 +392,16 @@ h1{
 	margin-left: 190px
 }
 
-
-
-
 .d_img {
   height: 250;
   width: 250;
   margin-left: 100px;
-  hspace:41;  
 }
 
 .c_img {
   height: 300;
   width: 250;
   margin-left: 290px;
-  hspace:41;  
 }
 .label_u{
 	font-size:18px;

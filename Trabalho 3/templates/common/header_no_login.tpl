@@ -31,7 +31,7 @@
 
 	<div class="topnav">
 		<img class="logo" src="{$BASE_URL}/images/logo.png">
-        <section id="container">
+        <section class="container">
 		{if $login_e eq "1"}
 		<label class="label_l" >Wrong Username or Password! </label>
 		{else}
