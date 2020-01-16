@@ -462,3 +462,128 @@ h1{
 /********************************************************************************************************************************************************************
 *********************************************************************************************************************************************************************
 ********************************************************************************************************************************************************************/
+/****************************************************************************************************************
+********************************************Search  Begin******************************************************
+*****************************************************************************************************************/
+.search_bar_cotainer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  background-color: #333;
+  justify-content: center;
+}
+
+#search {
+  height: 2.5em;
+}
+
+.input_expander {
+  height: 2.5em;
+}
+
+#search_button {
+  width: 3em;
+  height: 3em;
+  border-color: transparent;
+  background-color: transparent;
+}
+
+/****************************************************************************************************************
+********************************************Search End ********************************************************
+*****************************************************************************************************************/
+
+
+/****************************************************************************************************************
+********************************************Product Begin*************************************************
+*****************************************************************************************************************/
+/* On screens that are 992px wide or less, go from four columns to two columns */
+@media screen and (max-width: 992px) {
+  .column {
+    flex: 50%;
+  }
+}
+
+/* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .row {
+    flex-direction: column;
+  }
+}
+
+/* Container for flexboxes */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Container for flexboxes */
+.row2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  align-items: left;
+}
+
+/* Create four equal columns */
+.column {
+  flex: 25%;
+  padding: 20px;
+}
+
+.bestseller_container{
+  width: 150px;
+  height: 15px;
+  padding: 1.5%;
+  margin: 0 25% 1% 0;
+  text-align: center;
+}
+
+#b1{
+  background-color: #FFD700;
+}
+
+#b2{
+  background-color: #C0C0C0;
+}
+
+#b3{
+  background-color: #cd7f32;
+}
+
+.price_container{
+  background-color: #696969;
+  color: white;
+  width: 110px; 
+  height: 25px;
+  padding: 1.5% 0 0 5%;
+}
+
+.empty_container{
+  background-color: transparent;
+  width: 150px;
+  height: 25px;
+  padding: 1.5%;
+  margin: 0 25% 0 20%;
+}
+
+.buy_button_containter{
+  background-color: #e60000;
+  color: white;
+  width: 100px;
+  height: 30px;
+  margin-left: 20px;
+}
+
+.img_product{
+  width: 250px;
+  height: 300px;
+}
+/****************************************************************************************************************
+********************************************Product End*******************************************************
+*****************************************************************************************************************/
