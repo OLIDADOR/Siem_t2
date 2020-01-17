@@ -9,7 +9,7 @@
 
 $id_game = $_SESSION['id_game'];
 $product = get_product_information($id_game);
-print_r($product);
+
 
   $smarty->assign('admin', $_SESSION['admin_l']);
   $smarty->assign('user', $_SESSION['user']);

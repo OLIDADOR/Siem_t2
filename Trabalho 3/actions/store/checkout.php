@@ -5,7 +5,7 @@ include_once($BASE_DIR .'database/store.php');
 
 if(isset($_POST['checkout'])){
 
-    $user = "admin";
+    $user =  $_SESSION['user'];
 
     $total_cart = get_cart_total($user);
 

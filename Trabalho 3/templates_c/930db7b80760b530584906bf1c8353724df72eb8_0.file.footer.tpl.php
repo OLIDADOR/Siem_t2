@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2020-01-17 08:43:43
-  from "/usr/users2/2015/up201503216/public_html/tf/templates/common/footer_login.tpl" */
+/* Smarty version 3.1.30, created on 2020-01-17 08:46:40
+  from "/usr/users2/2015/up201503216/public_html/tf/templates/common/footer.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5e2173bfbc3d45_70023361',
+  'unifunc' => 'content_5e2174704b9f64_44984030',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '6c71d3d55b364afe098bc9007d471e2fb4b83799' => 
+    '930db7b80760b530584906bf1c8353724df72eb8' => 
     array (
-      0 => '/usr/users2/2015/up201503216/public_html/tf/templates/common/footer_login.tpl',
-      1 => 1576069026,
+      0 => '/usr/users2/2015/up201503216/public_html/tf/templates/common/footer.tpl',
+      1 => 1576059365,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e2173bfbc3d45_70023361 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e2174704b9f64_44984030 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 	</div> 
 	<div class="sidebar_open"> <span onclick="toggleNav()"><img src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>

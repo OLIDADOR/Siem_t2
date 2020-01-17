@@ -291,7 +291,9 @@ function get_game_id($g_name, $cat){
 function get_all_games(){
       global $conn;
         $stmt = $conn->prepare("SELECT id_game, g_name, category, n_keys, price , launch_date FROM game ORDER BY id_game ASC;");
-
+        $stmt->execute();
+        return $stmt->fetchAll();
+}
    function get_user_cart($user){
       global $conn;
       $stmt = $conn->prepare("SELECT A.id_game ,A.g_name, A.category, A.price, B.quantity FROM

@@ -1,6 +1,7 @@
 <?php
   include_once('../../config/init.php');
   include ($BASE_DIR . 'database/store.php');
+    include ($BASE_DIR . 'database/users.php');
   
   
   

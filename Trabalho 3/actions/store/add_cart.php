@@ -10,7 +10,7 @@ if (isset($_POST['back'])){
 else if(isset($_POST['cart_product'])){
 
     $product_id = $_POST['cart_product'];
-    $user_id = "admin";
+    $user_id =  $_SESSION['user'];
 
     $result = add_to_user_cart($product_id, $user_id);
 

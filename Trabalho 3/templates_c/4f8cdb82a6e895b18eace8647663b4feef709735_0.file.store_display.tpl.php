@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2020-01-17 00:33:48
+/* Smarty version 3.1.30, created on 2020-01-17 08:44:48
   from "/usr/users2/2015/up201503216/public_html/tf/templates/store/store_display.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5e2100ec3df330_42100057',
+  'unifunc' => 'content_5e21740015f2a8_12425061',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '4f8cdb82a6e895b18eace8647663b4feef709735' => 
     array (
       0 => '/usr/users2/2015/up201503216/public_html/tf/templates/store/store_display.tpl',
-      1 => 1579183612,
+      1 => 1579249830,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:common/footer_login.tpl' => 1,
   ),
 ),false)) {
-function content_5e2100ec3df330_42100057 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e21740015f2a8_12425061 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:common/header_login.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -85,8 +85,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
  </div>
 
 
-<form action="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
-/actions/store/product.php" method="post" id="productform" autocomplete="off">
+
   <div class = "row">
   <?php $_smarty_tpl->_assignInScope('i', 0);
 ?>
@@ -100,21 +99,18 @@ foreach ($_from as $_smarty_tpl->tpl_vars['product']->value) {
 ?>
           <div class="column">
               <?php ob_start();
-echo $_smarty_tpl->tpl_vars['_SESSION']->value['search_choise'];
+echo $_smarty_tpl->tpl_vars['search_choise_temps']->value;
 $_prefixVariable1=ob_get_clean();
 ob_start();
-echo $_smarty_tpl->tpl_vars['_SESSION']->value['search_choise'];
+echo $_smarty_tpl->tpl_vars['search_choise_temps']->value;
 $_prefixVariable2=ob_get_clean();
 ob_start();
-echo $_smarty_tpl->tpl_vars['_SESSION']->value['search_choise'];
+echo $_smarty_tpl->tpl_vars['search_choise_temps']->value;
 $_prefixVariable3=ob_get_clean();
 ob_start();
-echo $_smarty_tpl->tpl_vars['_SESSION']->value['search_choise'];
+echo $_smarty_tpl->tpl_vars['search_choise_temps']->value;
 $_prefixVariable4=ob_get_clean();
-ob_start();
-echo $_smarty_tpl->tpl_vars['_SESSION']->value['search_choise'];
-$_prefixVariable5=ob_get_clean();
-if ((($_smarty_tpl->tpl_vars['i']->value < 4) && (($_prefixVariable1 == 14) || ($_prefixVariable2 == 15) || ($_prefixVariable3 == 16) || ($_prefixVariable4 == 17) || (!isset($_prefixVariable5))))) {?>
+if ((($_smarty_tpl->tpl_vars['i']->value < 4) && (($_prefixVariable1 == 14) || ($_prefixVariable2 == 15) || ($_prefixVariable3 == 16) || ($_prefixVariable4 == 17)))) {?>
               <div class = "bestseller_container" id = "b<?php echo $_smarty_tpl->tpl_vars['i']->value;?>
 "><?php echo $_smarty_tpl->tpl_vars['i']->value;?>
 º Bestseller</div>
@@ -128,7 +124,11 @@ if ((($_smarty_tpl->tpl_vars['i']->value < 4) && (($_prefixVariable1 == 14) || (
               <div class = "row2">
                 <div class = "price_container">Price = <?php echo $_smarty_tpl->tpl_vars['product']->value['price'];?>
  €</div>
-                <button class = "buy_button_containter" type = "submit" id = "buy_button" value="buy_product"> Buy</button>
+                <form action="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+/actions/store/product.php" method="post" id="product_form" autocomplete="off">
+                  <input type='hidden' name='buy_button' value='<?php echo $_smarty_tpl->tpl_vars['product']->value['id_game'];?>
+'><button class = 'buy_button_containter' onclick='Submit_selected()'>More info</button>  
+                </form>
               </div>
           </div>
     <?php
@@ -138,7 +138,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
 ?>
 
   </div>
-   </form>
+
    
 
 

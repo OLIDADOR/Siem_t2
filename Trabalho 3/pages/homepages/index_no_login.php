@@ -6,4 +6,5 @@
   $smarty->assign('products', $products);
   $smarty->display('homepages/homepage_no_login.tpl');
   $_SESSION['login_e']=0;
+
 ?>
