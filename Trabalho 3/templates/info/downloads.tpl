@@ -23,7 +23,7 @@
 		</div>
 		<div class = "column">
 			  <div class="row">
-				   <a href="{$BASE_URL}/downloads/Mockup_Trabalho2.pptx" target="_blank" download><img src="{$BASE_URL}/images/download/ppt_download_icon.png" alt="" class="d_img" /></a>
+				   <a href="{$BASE_URL}/downloads/Mockup_Trabalho3.pptx" target="_blank" download><img src="{$BASE_URL}/images/download/ppt_download_icon.png" alt="" class="d_img" /></a>
 				   </div>
 				  <div class = "row">
 				  <span class="t3" >Powerpoint</span>
@@ -32,7 +32,7 @@
 			  </div>
 		<div class = "column">
 			  <div class="row">
-				   <a href="{$BASE_URL}/downloads/zip_tp2.zip" target="_blank" download><img src="{$BASE_URL}/images/download/PHP_download_icon.png" alt="" class="d_img" /></a>
+				   <a href="{$BASE_URL}/downloads/zip_tp3.zip" target="_blank" download><img src="{$BASE_URL}/images/download/PHP_download_icon.png" alt="" class="d_img" /></a>
 				   </div>
 			<div class="row">
 				 <span class="t3">PHP</span>
