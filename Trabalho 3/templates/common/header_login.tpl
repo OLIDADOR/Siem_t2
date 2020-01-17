@@ -49,7 +49,7 @@
   <a href="{$BASE_URL}/pages/users/account_management.php"> <div class="f"><img src="{$BASE_URL}/images/sideBar_icons/Imagem3.png" height="20" width="20" hspace="5">Account Management</div></a>
   <a href="{$BASE_URL}/pages/info/downloads.php"><div class="f"><img src="{$BASE_URL}/images/sideBar_icons/Download_Icon.png" height="20" width="20" hspace="5">Downloads </div></a>
 {if $admin eq "1"}
-  <a href="{$BASE_URL}/pages/product/product_management.php"><div class="c" id="a1"><img src="{$BASE_URL}/images/sideBar_icons/Imagem4.png" height="20" width="20" hspace="5">Product Management </div></a>
+  <a href="{$BASE_URL}/pages/store/product_management.php"><div class="c" id="a1"><img src="{$BASE_URL}/images/sideBar_icons/Imagem4.png" height="20" width="20" hspace="5">Product Management </div></a>
   <a href="{$BASE_URL}/pages/product/Sales_management.php"> <div class="c" id="a3"><img src="{$BASE_URL}/images/sideBar_icons/Imagem8.png" height="20" width="20" hspace="5"> Sales Management </div></a>
   <a href="{$BASE_URL}/pages/users/user_management.php"> <div class="c" id="a2"><img src="{$BASE_URL}/images/sideBar_icons/Imagem5.png" height="20" width="20" hspace="5"> User Management </div></a>
  {else}

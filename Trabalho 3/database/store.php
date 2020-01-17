@@ -285,5 +285,23 @@
 
       
     }
+function get_game_id($g_name, $cat){
+    global $conn;
+    $stmt = $conn->prepare("select id_game from game where g_name = ? AND category = ?;");
+    $stmt->execute(array($g_name,$cat));
+	return $stmt->fetch();
+}
+	
+function get_all_games(){
+      global $conn;
+        $stmt = $conn->prepare("SELECT id_game, g_name, category, n_keys, price , launch_date FROM game ORDER BY id_game ASC;");
 
+        $stmt->execute();
+        return $stmt->fetchAll();
+
+      
+    }
+
+
+	
 ?>
