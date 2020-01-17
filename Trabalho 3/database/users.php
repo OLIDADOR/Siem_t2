@@ -36,7 +36,16 @@
 		return 1;	
 	}
 	else{
+		$stmt = $conn->prepare("select * from credentials where username = ? and pass =?");
+		$stmt->execute(array($username, md5($password)));
+		$r=$stmt->fetchAll();
+		$num_registos_le = $stmt->rowCount();
+		if($num_registos_le > 0){
+			return -1;
+		}
+		else{
 		return 0;
+		}
 	}
   }
   
