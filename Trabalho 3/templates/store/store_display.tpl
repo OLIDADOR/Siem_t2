@@ -34,7 +34,7 @@
  </div>
 
 {*Basicamente um flex container de row que dentro tem colunas sendo que é separado consuante a dimensao do ecra *}
-<form action="{$BASE_URL}/actions/store/product.php" method="post" id="productform" autocomplete="off">
+
   <div class = "row">
   {$i = 0}
     {foreach $products as $product}
@@ -43,15 +43,13 @@
           <div class="column">
               {if (($i < 4) and
                               (
-                                ({$_SESSION['search_choise']}== 14 )
+                                ({$search_choise_temps}== 14 )
                               or
-                                ({$_SESSION['search_choise']}== 15 )
+                                ({$search_choise_temps}== 15 )
                               or
-                                ({$_SESSION['search_choise']}== 16 )
+                                ({$search_choise_temps}== 16 )
                               or
-                                ({$_SESSION['search_choise']}== 17 )
-                              or
-                                (!isset({$_SESSION['search_choise']}) )      
+                                ({$search_choise_temps}== 17 )    
                               ) 
                               )
                               }
@@ -63,12 +61,14 @@
               <img src="{$BASE_URL}/images/game_cases/{$product.id_game}.jpg">
               <div class = "row2">
                 <div class = "price_container">Price = {$product.price} €</div>
-                <button class = "buy_button_containter" type = "submit" id = "buy_button" value="buy_product"> Buy</button>
+                <form action="{$BASE_URL}/actions/store/product.php" method="post" id="product_form" autocomplete="off">
+                  <input type='hidden' name='buy_button' value='{$product.id_game}'><button class = 'buy_button_containter' onclick='Submit_selected()'>More info</button>  
+                </form>
               </div>
           </div>
     {/foreach}
   </div>
-   </form>
+
    
 
 

@@ -19,7 +19,6 @@ html {
   width: 100%;
   height: 100%;
   display: grid;
-  justify-items: center;
   grid-template-columns: 15.625em auto auto auto;
   grid-template-rows: 4.6875em auto auto 3em 2.8125em;
   
@@ -241,14 +240,10 @@ h1{
 **************************************************Register Form Begin********************************************
 *****************************************************************************************************************/
 #register {
-  width: 20em;
-  margin: 1em auto;
-  margin-left: 250px;
+  width: 20em;  
 }
 
 #register form {
-  align-self: center;
-  justify-self: center;
   width: 100%;
 }
 
@@ -533,12 +528,12 @@ h1{
 /* Create four equal columns */
 .column {
   flex: 25%;
-  padding: 20px;
+  padding: 1.25em;
 }
 
 .bestseller_container{
-  width: 150px;
-  height: 15px;
+  width: 9.375em;
+  height: 0.9375em;
   padding: 1.5%;
   margin: 0 25% 1% 0;
   text-align: center;
@@ -566,8 +561,8 @@ h1{
 
 .empty_container{
   background-color: transparent;
-  width: 150px;
-  height: 25px;
+  width: 6.875em;
+  height: 1.5625em;
   padding: 1.5%;
   margin: 0 25% 0 20%;
 }
@@ -575,15 +570,87 @@ h1{
 .buy_button_containter{
   background-color: #e60000;
   color: white;
-  width: 100px;
-  height: 30px;
-  margin-left: 20px;
+  width: 6.25em;
+  height: 1.875em;
+  margin-left: 1.25em;
+}
+.back_button_containter{
+  background-color: #080808;
+  color: white;
+  width: 6.25em;
+  height: 1.875em;
+  margin-left: 1.25em;
+  border-radius: 0.75em;
+}
+.img_product{
+  width: 15.625em;
+  height: 18.75em;
 }
 
-.img_product{
-  width: 250px;
-  height: 300px;
+.product_text{
+  color: rgb(243, 243, 243);
 }
+
+.product_text b{
+  color: white;
+  background-color: rgb(211, 14, 14);
+  padding: 0.25em;
+  border-radius: 0.75em;
+}
+
+.product_description{
+  color: rgb(243, 243, 243);
+  line-height: 2em;
+  padding-left: 1em;
+}
+
 /****************************************************************************************************************
 ********************************************Product End*******************************************************
 *****************************************************************************************************************/
+
+/****************************************************************************************************************
+********************************************Cart Begin*******************************************************
+*****************************************************************************************************************/
+
+.table_cart {
+  border: 1px solid red;
+  text-align: center;
+  width: 100%;
+}
+.table_cart table{
+  border: 1px solid red;
+  text-align: center;
+  color: white;
+}
+.table_cart td{
+  border: 1px solid red;
+  text-align: center;
+  color: white;
+}
+.table_cart th{
+  border: 1px solid red;
+  text-align: center;
+  color: white;
+}
+
+.images_cart{
+  height: 100px;
+  width: 75px;
+  cursor: context-menu;
+}
+
+.checkout_button_container{
+  background-color: #cf2828;
+  color: white;
+  width: 7em;
+  height: 4em;
+  float: right;
+  border-radius: 0.75em;
+}
+
+/****************************************************************************************************************
+********************************************Cart End*************************************************************
+*****************************************************************************************************************/
+
+
+

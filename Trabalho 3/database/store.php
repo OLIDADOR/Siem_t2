@@ -259,31 +259,116 @@
 
     function get_product_information($id_game){
       global $conn;
-        $stmt = $conn->prepare("SELECT 
-                                A.g_name AS g_name,
-                                A.launch_date AS launch_date,
-                                A.category AS category,
-                                A.platform AS platform,
-                                C.d_name AS developer,
-                                A.g_description AS g_description,
-                                A.price AS price,
-                                A.n_keys AS keys
-                                 FROM
-                                (SELECT id_game, category, price, platform, g_name, launch_date, g_description, n_keys
-                                 FROM game 
-                                 WHERE id_game = ?) AS A
+        $stmt = $conn->prepare("SELECT A.id_game, g_name, launch_date, category, platform, d_name AS developer, g_description, price FROM
+                               (SELECT id_game, category, price, platform, g_name, launch_date, g_description, n_keys
+                                FROM game
+                                WHERE id_game = ?) AS A
                                 JOIN
-                                (SELECT id_game, n_sold FROM sales) AS B
-                                ON A.id_game = B.id_game
-                                JOIN
-                                (SELECT id_game, d_name FROM developer) AS C
-                                ON A.id_game = C.id_game;
-                                ;");
+                                (SELECT id_game, d_name FROM developer) AS B
+                                ON A.id_game = B.id_game;
+                                ");
 
-        $stmt->execute(array($_SESSION['id_game']));
+        $stmt->execute(array($id_game));
         return $stmt->fetchAll();
-
-      
     }
+
+    function add_to_user_cart($id_game, $user){
+      global $conn;
+        $stmt = $conn->prepare("INSERT INTO cart (id_purchase, id_game, id_buyer)
+                                VALUES (DEFAULT, ?,
+                               (SELECT id FROM credentials WHERE username = ?));");
+
+        $stmt->execute(array($id_game, $user));
+        return $stmt->fetchAll();
+    }
+
+   function get_user_cart($user){
+      global $conn;
+      $stmt = $conn->prepare("SELECT A.id_game ,A.g_name, A.category, A.price, B.quantity FROM
+                             (SELECT id_game, g_name, category, price FROM game) AS A
+                              JOIN
+                             (SELECT id_game, COUNT(id_game) AS quantity FROM cart WHERE id_buyer = (SELECT id FROM credentials WHERE username = ?) GROUP BY id_game) AS B 
+                              ON A.id_game = B.id_game;");
+
+        $stmt->execute(array($user));
+        return $stmt->fetchAll();
+   }
+   function remove_game_from_user_cart($id_game, $user){
+      global $conn;
+      $stmt = $conn->prepare("DELETE FROM cart
+                              WHERE id_game = ?
+                              AND  
+                              id_buyer = (SELECT id FROM credentials WHERE username = ?);");
+
+        $stmt->execute(array($id_game, $user));
+        return $stmt->fetchAll();
+   }
+
+   function get_cart_total($user){
+     global $conn;
+     $stmt = $conn->prepare("SELECT SUM(A.price*B.quantity) AS total FROM
+                            (SELECT id_game, g_name, category, price FROM game) AS A
+                            JOIN
+                            (SELECT id_game,
+                             COUNT(id_game) AS quantity
+                             FROM cart
+                             WHERE id_buyer = (SELECT  id FROM credentials WHERE username = ?) group by cart.id_game) AS B
+                             ON A.id_game = B.id_game;");
+
+      $stmt->execute(array($user));
+      return $stmt->fetch();
+   }
+
+   function checkout($user){
+     global $conn;
+     $stmt = $conn->prepare("DELETE FROM cart WHERE 
+                             id_buyer = (SELECT id FROM credentials WHERE username = ?);");
+
+     $stmt->execute(array($user));
+     return $stmt->fetchAll();
+   }
+
+   function update_sales($quantity, $id_game, $user){
+     global $conn;
+     $stmt = $conn->prepare("INSERT INTO sales (id_sales, n_sold, id_game, id_buyer)
+                             VALUES (DEFAULT, ?, ? 
+                             ,(SELECT id FROM credentials WHERE username = ?))");
+
+     $stmt->execute(array($quantity, $id_game, $user));
+     return $stmt->fetchAll();
+   }
+
+   function get_sales(){
+    global $conn;
+    $stmt = $conn->prepare("SELECT id_sales AS sale_id, n_sold AS sold_copys, g_name, username FROM
+                           (SELECT * FROM sales) AS A
+                            JOIN
+                           (SELECT id_game, g_name FROM game ) AS B
+                            ON A.id_game = B.id_game
+                            JOIN
+                           (SELECT id, username FROM credentials) AS C
+                            ON C.id = A.id_buyer;");
+
+    $stmt->execute();
+    return $stmt->fetchAll();
+   }
+
+   function confirm_one_sale($sale_id){
+    global $conn;
+    $stmt = $conn->prepare("DELETE FROM sales
+                            WHERE id_sales = ?;");
+
+    $stmt->execute(array($sale_id));
+    return $stmt->fetchAll();
+   }
+
+   function confirm_all_sales(){
+    global $conn;
+    
+    $stmt = $conn->prepare("DELETE FROM sales;");
+    $stmt->execute();
+    return $stmt->fetchAll();
+   }
+   
 
 ?>

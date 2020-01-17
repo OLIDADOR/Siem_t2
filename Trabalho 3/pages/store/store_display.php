@@ -5,12 +5,13 @@
 //	header("Location:  $BASE_URL" . '/pages/homepages/index_no_login.php');
 //}
 
- //$user = getuser($_SESSION['id']);
+ $user = getuser($_SESSION['id']);
 
  //Se a variavel de Sessão estiver definida mostra a ultima busca
  //Senao mostra os 3 best sellers
  if (isset($_SESSION['search_choise'])){
-  $products = get_searched_product(); 
+  $products = get_searched_product();
+  $search_choise_temp = $_SESSION['search_choise']; 
  }
  else {
   $products = get_3_most_bestsellers();
@@ -25,6 +26,7 @@
  $smarty->assign('products', $products);
  $smarty->assign('categories', $categories);
  $smarty->assign('developers', $developers);
+ $smarty->assign('search_choise_temps', $search_choise_temp);
 
  //Chamada do template a ser mostrado ao utilizador
  $smarty->display('store/store_display.tpl');

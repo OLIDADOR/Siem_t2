@@ -8,7 +8,7 @@ include_once($BASE_DIR .'database/store.php');
 $category= $_POST['category'];
 $developer = $_POST['developer'];
 $order = $_POST['order'];
-$search_text = $_POST['search_text'];
+$search_text = strip_tags($_POST['search_text']);
 
 /*
 Indice:
