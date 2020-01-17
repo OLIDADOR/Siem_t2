@@ -45,7 +45,7 @@
 <div id="mySidenav" class="sidenav">
   <div class="e"></div>
   <a href="{$BASE_URL}/pages/store/store_display.php"><div class="f"><img src="{$BASE_URL}/images/sideBar_icons/Imagem1.png" height="20" width="20" hspace="5">Store</div></a>
-  <a href="{$BASE_URL}/pages/store/purchases.php"><div class="f"><img src="{$BASE_URL}/images/sideBar_icons/Imagem2.png" height="20" width="20" hspace="5"> My Purchases</div></a>
+  <a href="{$BASE_URL}/pages/store/cart.php"><div class="f"><img src="{$BASE_URL}/images/sideBar_icons/Imagem2.png" height="20" width="20" hspace="5"> My Purchases</div></a>
   <a href="{$BASE_URL}/pages/users/account_management.php"> <div class="f"><img src="{$BASE_URL}/images/sideBar_icons/Imagem3.png" height="20" width="20" hspace="5">Account Management</div></a>
   <a href="{$BASE_URL}/pages/info/downloads.php"><div class="f"><img src="{$BASE_URL}/images/sideBar_icons/Download_Icon.png" height="20" width="20" hspace="5">Downloads </div></a>
 {if $admin eq "1"}

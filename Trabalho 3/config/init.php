@@ -1,6 +1,6 @@
 <?php
   $BASE_DIR = dirname(__DIR__).'/';
-  $BASE_URL = 'https://gnomo.fe.up.pt/~up201503216/tf/';
+  $BASE_URL = 'https://paginas.fe.up.pt/~up201503216/tf/';
   
  session_start();
 
@@ -42,6 +42,5 @@ if (isset($_SESSION['success_messages'])) {
   $smarty->assign('success_messages', $_SESSION['success_messages']);
   unset($_SESSION['success_messages']);
 }
-  
-  
+ 
 ?>

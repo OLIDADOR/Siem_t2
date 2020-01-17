@@ -37,6 +37,7 @@ if(!empty($email_p)){
 }
 if(!empty($saldo_p) or is_numeric($saldo_p)){
 	$saldo=$saldo_p;
+	$aux=1;
 }
 
 $email = test_input($email);
@@ -75,6 +76,9 @@ else{
 		removeadmin($id);
 		 header("Location:  $BASE_URL" . '/pages/users/user_management.php');
 	}
+}
+if($aux==1 and $username==$_SESSION['user']){
+	$_SESSION['saldo']=$saldo;
 }
 }
 

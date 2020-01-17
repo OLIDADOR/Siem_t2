@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2020-01-17 09:01:48
+/* Smarty version 3.1.30, created on 2020-01-17 09:44:29
   from "/usr/users2/2015/up201503216/public_html/tf/templates/common/header_login.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5e2177fc45dac7_75557392',
+  'unifunc' => 'content_5e2181fd267ad3_58564497',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ae581458ae42ee967cae4a9277dbea31f0dfb302' => 
     array (
       0 => '/usr/users2/2015/up201503216/public_html/tf/templates/common/header_login.tpl',
-      1 => 1579251704,
+      1 => 1579254205,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e2177fc45dac7_75557392 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e2181fd267ad3_58564497 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 
@@ -127,7 +127,7 @@ function content_5e2177fc45dac7_75557392 (Smarty_Internal_Template $_smarty_tpl)
 /pages/store/store_display.php"><div class="f"><img src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
 /images/sideBar_icons/Imagem1.png" height="20" width="20" hspace="5">Store</div></a>
   <a href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
-/pages/store/purchases.php"><div class="f"><img src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+/pages/store/cart.php"><div class="f"><img src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
 /images/sideBar_icons/Imagem2.png" height="20" width="20" hspace="5"> My Purchases</div></a>
   <a href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
 /pages/users/account_management.php"> <div class="f"><img src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>

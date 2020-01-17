@@ -374,13 +374,23 @@ function get_all_games(){
     return $stmt->fetchAll();
    }
 
-   function confirm_all_sales(){
+  function confirm_all_sales($id){
     global $conn;
     
-    $stmt = $conn->prepare("DELETE FROM sales;");
-    $stmt->execute();
+    $stmt = $conn->prepare("DELETE FROM sales WHERE id_buyer = ?;");
+    $stmt->execute(array($id));
     return $stmt->fetchAll();
    }
+
+   function changebalance($saldo, $id){
+   global $conn;
+   
+  $stmt = $conn->prepare("UPDATE credentials SET saldo= ? WHERE id= ? ;");
+  $stmt->execute(array($saldo, $id));
+   
+  }
+   
+   
    
 
 ?>

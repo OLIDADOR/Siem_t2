@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.30, created on 2020-01-17 08:43:43
+/* Smarty version 3.1.30, created on 2020-01-17 09:44:29
   from "/usr/users2/2015/up201503216/public_html/tf/templates/common/footer_login.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5e2173bfbc3d45_70023361',
+  'unifunc' => 'content_5e2181fd2a1519_59482521',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e2173bfbc3d45_70023361 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e2181fd2a1519_59482521 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 	</div> 
 	<div class="sidebar_open"> <span onclick="toggleNav()"><img src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>

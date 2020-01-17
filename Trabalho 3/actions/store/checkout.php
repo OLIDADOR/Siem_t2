@@ -9,8 +9,8 @@ if(isset($_POST['checkout'])){
 
     $total_cart = get_cart_total($user);
 
-    $saldo = 1200;
-    //$saldo = $_SESSION['saldo'];
+    //$saldo = 1200;
+    $saldo = $_SESSION['saldo'];
 
     if($saldo > ( $total_cart['total'])){
         $cart_products_temp = get_user_cart($user);
@@ -21,7 +21,8 @@ if(isset($_POST['checkout'])){
 
         $result = checkout($user);
 
-        //$_SESSION['saldo'] = $saldo - $total_cart.total;
+        $_SESSION['saldo'] = $saldo - $total_cart['total'];
+		changebalance($_SESSION['saldo'],$_SESSION['id']);
     }
     
     header("Location:  $BASE_URL" . '/pages/store/cart.php');
